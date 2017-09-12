@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.production.config.js --progress --profile --colors",
-    "start": "webpack-dashboard -- webpack-dev-server --progress --profile --colors",
+    "start": "webpack-dev-server --progress --profile --colors",
     "start:node": "node  www.js"
   },
   "repository": {
@@ -58,6 +58,7 @@
     "axios": "^0.16.2",
     "babel-polyfill": "^6.22.0",
     "classnames": "^2.2.5",
+    "config": "^1.26.2",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^v2.0.0-rc.1",
     "html-webpack-plugin": "^2.26.0",
@@ -77,7 +78,6 @@
     "uuid": "^3.0.1",
     "webpack": "^2.2.1",
     "webpack-cleanup-plugin": "^0.4.2",
-    "webpack-dashboard": "^0.3.0",
     "webpack-dev-server": "^2.4.1"
   }
 }
