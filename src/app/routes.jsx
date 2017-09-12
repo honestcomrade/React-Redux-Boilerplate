@@ -10,7 +10,9 @@ export default (lang = 'en') => {
   return (
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
-      <Route path="/test" component={() => <div>Test Route</div>} />
+      <Route path="/test" component={ () => <div>Test Route</div> } />
+      <Route path="/team" component={ () => <div>MY TEAM</div> } />
+
       <Route title="404 Page Not Found" path="*" component={() => <div>404 Route</div>} />
     </Route>
   )

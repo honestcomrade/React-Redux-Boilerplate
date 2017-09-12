@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import reactJsLogo from '../../../resources/assets/images/react.svg'
+import banner from '../../../resources/assets/images/banner.jpg'
 import './Home.scss'
+import { Link } from 'react-router';
 
 class Home extends Component {
   constructor(props) {
@@ -14,19 +15,19 @@ class Home extends Component {
       <div className="home">
         <div className="home__content">
           <a href="#" className="home__logo-link">
-            <img className="home__logo-img" src={reactJsLogo} alt="React Logo" />
+            <img src={ banner } alt="React Logo" />
           </a>
-          <h4 className="home__heading">React-Redux Boilerplate</h4>
+          <h4 className="home__heading">Offensive Fowlers</h4>
           <nav className="home__nav">
             <ul className="home__nav-list">
               <li className="home__nav-list-item">
-                <a href="https://github.com/david-babunashvili/React-Redux-Boilerplate#readme" target="_blank" rel="noopener noreferrer" className="home__nav-list-link">DOCUMENTATION</a>
+                <Link to="/team" className="home__nav-list-link">TEAM</Link>
               </li>
               <li className="home__nav-list-item">
-                <a href="https://github.com/david-babunashvili/React-Redux-Boilerplate" target="_blank" rel="noopener noreferrer" className="home__nav-list-link">GITHUB</a>
+                <a href="http://games.espn.com/ffl/leagueoffice?leagueId=262704&seasonId=2017" target="_blank" rel="noopener noreferrer" className="home__nav-list-link">LEAGUE</a>
               </li>
               <li className="home__nav-list-item">
-                <a href="https://github.com/david-babunashvili/React-Redux-Boilerplate/issues" target="_blank" rel="noopener noreferrer" className="home__nav-list-link">BUGS</a>
+                <a href="https://github.com/honestcomrade" target="_blank" rel="noopener noreferrer" className="home__nav-list-link">SUPPORT</a>
               </li>
             </ul>
           </nav>
