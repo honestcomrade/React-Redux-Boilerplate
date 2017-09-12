@@ -15,7 +15,7 @@ class Home extends Component {
       <div className="home">
         <div className="home__content">
           <a href="#" className="home__logo-link">
-            <img src={ banner } alt="React Logo" />
+            <img src={ banner } alt="Football" className="header-banner"/>
           </a>
           <h4 className="home__heading">Offensive Fowlers</h4>
           <nav className="home__nav">
