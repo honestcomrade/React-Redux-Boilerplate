@@ -22,14 +22,7 @@ teams = league.teams
 
 my_team = next(team for team in teams if team.team_name == my_team_name)
 
-dir(my_team)
 week_matchups = league.scoreboard(week=2)
-
-# my_week = next(matchup for matchup in matchups if matchup.team_name == my_team_name)
-# for matchup in week_matchups:
-#   print(matchup)
-#   print(type(matchup))
-#   pprint(vars(matchup))
 
 for matchup in week_matchups:
   if matchup.home_team.team_name == my_team_name:
@@ -43,7 +36,6 @@ print(my_match_this_week)
 pprint(vars(my_match_this_week))
 
 print(my_team_this_week)
-
 pprint(vars(my_team_this_week))
 
 
