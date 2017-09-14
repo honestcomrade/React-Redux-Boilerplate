@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
 import banner from '../../../resources/assets/images/banner.jpg'
 import './Home.scss'
-import { Link } from 'react-router';
 
 class Home extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Home extends Component {
       <div className="home">
         <div className="home__content">
           <a href="#" className="home__logo-link">
-            <img src={ banner } alt="Football" className="header-banner"/>
+            <img src={banner} alt="Football" className="header-banner" />
           </a>
           <h4 className="home__heading">Offensive Fowlers</h4>
           <nav className="home__nav">
