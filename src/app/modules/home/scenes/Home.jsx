@@ -1,10 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 import banner from '../../../resources/assets/images/banner.jpg'
 import './Home.scss'
+import * as matchupActions from '../../common/actions/matchupActions'
+
 
 class Home extends Component {
+  componentDidMount() {
+    if(this.props.matchup.length == 0) {
+      this.props.actions.fetchMatchup();
+    }
+  }
+
   constructor(props) {
     super(props)
     this.state = {}
@@ -37,14 +46,14 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {}
+// Home.propTypes = {}
 
 function mapStateToProps(state, ownProps) {
-  return {
-    ownProps,
-  }
+  return { matchup: state.matchup }
 }
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(matchupActions, dispatch)
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
