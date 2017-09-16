@@ -10,9 +10,9 @@ import * as matchupActions from '../../common/actions/matchupActions'
 class Home extends Component {
   componentDidMount() {
     console.log("PROP:", this.props)
-    if(this.props.matchup.length == 0) {
+    // if(this.props.matchup.length == 0) {
       this.props.actions.getMatchup();
-    }
+    // }
   }
 
   constructor(props) {

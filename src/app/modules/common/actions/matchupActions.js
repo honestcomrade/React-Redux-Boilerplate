@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export function getMatchup() {
   return function(dispatch) {
-    axios.get('../../../../../../db/team.json')
+    axios.get('../../../../../db/team.json')
     .then(function(response) {
       dispatch({type: "GET_MATCH", payload:response.data})
     })

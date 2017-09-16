@@ -78,6 +78,8 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3",
     "redux-saga": "^0.14.2",
+    "redux-thunk": "^2.2.0",
+    "thunk": "0.0.1",
     "uuid": "^3.0.1",
     "webpack": "^2.2.1",
     "webpack-cleanup-plugin": "^0.4.2",

@@ -15,6 +15,7 @@ import routes from './routes'
 import rootSaga from './rootSagas'
 import translations from './translations'
 import { IntlProvider } from 'react-redux-multilingual'
+import thunk from 'redux-thunk'
 // for bundling your styles
 // import './bundle.scss'
 
@@ -24,7 +25,8 @@ const initialState = window.INITIAL_STATE;
 const sagaMiddleware = createSagaMiddleware()
 const middlewares = [
   sagaMiddleware,
-  logger
+  logger,
+  thunk
 ]
 
 const enhancers = [
