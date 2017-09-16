@@ -19,16 +19,21 @@ import { IntlProvider } from 'react-redux-multilingual'
 // import './bundle.scss'
 
 const devtools = window.devToolsExtension || (() => noop => noop)
+const initialState = window.INITIAL_STATE;
+
 const sagaMiddleware = createSagaMiddleware()
 const middlewares = [
   sagaMiddleware,
+  logger
 ]
+
 const enhancers = [
   applyMiddleware(...middlewares),
   devtools(),
 ]
 const store = createStore(
   reducers,
+  initialState,
   compose(...enhancers)
 )
 
